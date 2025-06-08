@@ -1,2 +1,3 @@
 # 忽略不上传的文件夹
 onlineJudgeGuide/
+.idea
