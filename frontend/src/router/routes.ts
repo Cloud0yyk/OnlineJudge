@@ -12,6 +12,7 @@ import QuestionsView from "@/views/question/QuestionsView.vue";
 import ViewQuestionView from "@/views/question/ViewQuestionView.vue";
 import QuestionSubmitView from "@/views/question/QuestionSubmitView.vue";
 
+// 路由
 export const routes: Array<RouteRecordRaw> = [
   {
     path: "/user",
