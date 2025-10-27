@@ -1,6 +1,6 @@
 package com.cloud.cloud_backend_user_service.service.impl;
 
-import static com.cloud.cloud_backend_common.UserConstant.USER_LOGIN_STATE;
+import static com.cloud.cloud_backend_common.constant.UserConstant.USER_LOGIN_STATE;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;

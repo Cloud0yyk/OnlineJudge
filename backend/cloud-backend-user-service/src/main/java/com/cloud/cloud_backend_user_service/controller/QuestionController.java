@@ -9,7 +9,7 @@ import com.cloud.cloud_backend_common.common.BaseResponse;
 import com.cloud.cloud_backend_common.common.DeleteRequest;
 import com.cloud.cloud_backend_common.common.ErrorCode;
 import com.cloud.cloud_backend_common.common.ResultUtils;
-import com.cloud.cloud_backend_common.UserConstant;
+import com.cloud.cloud_backend_common.constant.UserConstant;
 import com.cloud.cloud_backend_common.exception.BusinessException;
 import com.cloud.cloud_backend_common.exception.ThrowUtils;
 import com.cloud.cloud_backend_user_service.model.dto.questionsubmit.QuestionSubmitAddRequest;

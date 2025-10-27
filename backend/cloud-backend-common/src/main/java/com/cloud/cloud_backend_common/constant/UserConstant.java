@@ -1,4 +1,4 @@
-package com.cloud.cloud_backend_common;
+package com.cloud.cloud_backend_common.constant;
 
 /**
  * 用户常量
