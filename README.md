@@ -140,5 +140,8 @@ public interface CodeSandbox {
 
 # ⭐ Star 本项目
 
-如果你觉得本项目对你有帮助，请点个 Star ⭐
+如果你觉得本项目对你有帮助，请点个 Star ⭐！
+
 你的支持是我持续迭代的动力！
+
+注：该项目来源于[编程导航知识星球](https://yupi.icu)，感谢[yupi](https://github.com/liyupi)大佬
