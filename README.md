@@ -53,8 +53,6 @@
 - 禁止加载本地库  
 - 禁止访问文件系统 API  
 
----
-
 ## 2. Docker 沙箱（Docker Sandbox）
 
 使用 `docker-java` SDK 完全隔离用户代码。
@@ -78,7 +76,6 @@
 #### 🔧 Cgroups  
 限制 CPU / 内存 / IO 资源。
 
----
 
 ## 3. 日志捕获与调度控制
 
