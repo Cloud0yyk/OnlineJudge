@@ -7,9 +7,9 @@
         <artifactId>backend</artifactId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-    <artifactId>cloud-backend-user-service</artifactId>
-    <name>cloud-backend-user-service</name>
-    <description>用户服务</description>
+    <artifactId>cloud-backend-service-client</artifactId>
+    <name>cloud-backend-service-client</name>
+    <description>后端服务客户端</description>
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,6 +22,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <version>3.1.5</version>
         </dependency>
 
         <dependency>

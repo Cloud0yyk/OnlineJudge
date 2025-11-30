@@ -2,10 +2,10 @@ package com.cloud.cloud_backend_user_service.service;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.cloud.cloud_backend_user_service.model.dto.user.UserQueryRequest;
-import com.cloud.cloud_backend_user_service.model.entity.User;
-import com.cloud.cloud_backend_user_service.model.vo.LoginUserVO;
-import com.cloud.cloud_backend_user_service.model.vo.UserVO;
+import com.cloud.cloud_backend_model.user.dto.UserQueryRequest;
+import com.cloud.cloud_backend_model.user.entity.User;
+import com.cloud.cloud_backend_model.user.VO.LoginUserVO;
+import com.cloud.cloud_backend_model.user.VO.UserVO;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import me.chanjar.weixin.common.bean.WxOAuth2UserInfo;
@@ -13,8 +13,6 @@ import me.chanjar.weixin.common.bean.WxOAuth2UserInfo;
 /**
  * 用户服务
  *
- * @author <a href="https://github.com/liyupi">程序员鱼皮</a>
- * @from <a href="https://yupi.icu">编程导航知识星球</a>
  */
 public interface UserService extends IService<User> {
 
