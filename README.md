@@ -116,6 +116,8 @@ public interface CodeSandbox {
 - DockerSandbox
 可轻松扩展 Firecracker、gVisor、eBPF 等未来沙箱。
 
+---
+
 ## 🔍 核心能力总结
 ✅ 从 0 到 1 自研原生 Java 沙箱
 - Runtime.exec
@@ -139,6 +141,8 @@ public interface CodeSandbox {
 - 策略模式
 - 代理模式
 - 模板方法模式
+
+---
 
 ## ⭐ Star 本项目
 
