@@ -7,6 +7,7 @@
 🔥 多层防御  | ⚙️ 高扩展性  | 🧩 插件化判题策略  | 🐳 Docker 隔离 | ☢️ Seccomp 系统调用过滤
 </p>
 
+---
 
 ## ✨ 项目特性
 
@@ -17,6 +18,7 @@
 - **代理模式提供日志增强、监控、统计等 AOP 能力**
 - **模板方法抽象统一执行流程（保存 → 编译 → 执行 → 收集 → 清理）**
 
+---
 
 ## 📘 项目背景
 
@@ -32,52 +34,52 @@
 
 ---
 
-# 🔒 安全设计
+## 🔒 安全设计
 
-## 1. 原生 Java 沙箱（Native Sandbox）
+### 1. 原生 Java 沙箱（Native Sandbox）
 
-### ✔ 运行时隔离
+✔ 运行时隔离
 - `Runtime.exec()` 创建受控子进程  
 - `Thread.sleep + destroy()` 实现超时终止  
 - JVM 参数 `-Xmx` 限制内存  
 
-### ✔ 敏感操作拦截（SecurityManager）
+✔ 敏感操作拦截（SecurityManager）
 - 文件读写：拦截 `FilePermission`  
 - 进程创建：拦截 `RuntimePermission`  
 - 网络访问：拦截 `SocketPermission`  
 
-### ✔ 字典树 + 黑名单检测
+✔ 字典树 + 黑名单检测
 - 禁止反射  
 - 禁止创建进程  
 - 禁止 System.exit  
 - 禁止加载本地库  
 - 禁止访问文件系统 API  
 
-## 2. Docker 沙箱（Docker Sandbox）
+### 2. Docker 沙箱（Docker Sandbox）
 
 使用 `docker-java` SDK 完全隔离用户代码。
 
-### ✔ 容器资源限制（HostConfig）
+✔ 容器资源限制（HostConfig）
 - 内存限制：`withMemory(100MB)`  
 - 禁用 Swap：`withMemorySwap(0)`  
 - CPU 限制：`withCpuCount(1)`  
 - 只读根目录：readonly rootfs  
 - 挂载代码目录为只读  
 
-### ✔ Linux 内核安全模块
+✔ Linux 内核安全模块
 
-#### 🔧 Seccomp
+🔧 Seccomp
 限制系统调用：
 
 - 禁止 `clone`（禁止 fork）
 - 禁止 `write`（限制写文件）
 - 禁止 `unshare` / `mount`（阻止逃逸）
 
-#### 🔧 Cgroups  
+🔧 Cgroups  
 限制 CPU / 内存 / IO 资源。
 
 
-## 3. 日志捕获与调度控制
+### 3. 日志捕获与调度控制
 
 - `ExecStartResultCallback` 异步流式捕获 stdout & stderr  
 - `CountDownLatch` 实现超时控制  
@@ -86,7 +88,7 @@
 
 ---
 
-# 🧩 判题策略（Strategy Pattern）
+## 🧩 判题策略（Strategy Pattern）
 
 内置可选：
 
@@ -99,7 +101,7 @@
 
 ---
 
-# 🏭 沙箱创建（Static Factory Pattern）
+## 🏭 沙箱创建（Static Factory Pattern）
 
 统一沙箱接口：
 
@@ -114,7 +116,7 @@ public interface CodeSandbox {
 - DockerSandbox
 可轻松扩展 Firecracker、gVisor、eBPF 等未来沙箱。
 
-# 🔍 核心能力总结
+## 🔍 核心能力总结
 ✅ 从 0 到 1 自研原生 Java 沙箱
 - Runtime.exec
 - Process I/O
@@ -138,7 +140,7 @@ public interface CodeSandbox {
 - 代理模式
 - 模板方法模式
 
-# ⭐ Star 本项目
+## ⭐ Star 本项目
 
 如果你觉得本项目对你有帮助，请点个 Star ⭐！
 
